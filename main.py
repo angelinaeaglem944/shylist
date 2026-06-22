@@ -1,6 +1,6 @@
-"""integrator_c167b2 - Network utility."""
+"""integrator_f52c8c - Network utility."""
 import socket, json
-SERVICE_TAG = "integrator_c167b2"
+SERVICE_TAG = "integrator_f52c8c"
 def get_host_info() -> dict:
     hostname = socket.gethostname()
     try: ip = socket.gethostbyname(hostname)

